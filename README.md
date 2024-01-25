@@ -14,7 +14,7 @@ This repository is a collection of essential data structures and algorithms impl
 
 ## Data Structures
 ### Linked Lists
-- Singly Linked List
+- Singly Linked List (Basic functionality completed and tested. Looking for new features or methods to add.)
 <br>
 
 ## Algorithms
