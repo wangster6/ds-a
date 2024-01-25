@@ -1,4 +1,4 @@
-# ray-dsa
+# raydsa
 This repository is a collection of essential data structures and algorithms implemented in Python, designed to provide a convenient "toolkit" for developers. The purpose of this library is to offer reusable and efficient solutions to common challenges and save developers valuable time and effort.
 <br>
 <br>
