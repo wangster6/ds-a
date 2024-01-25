@@ -8,21 +8,28 @@ This repository is a collection of essential data structures and algorithms impl
 - **Error Handling:** Robust error handling mechanisms to provide informative error messages and improve the library's resilience in real-world applications.
 <br>
 
-## Prerequisites
-- Python 3.12.0
+## Languages
+- Python (Version 3.12.0)
 <br>
 
-## Getting Started
-1. Clone this repository to your local machine.
-2. Navigate to the ray-dsa library directory.
-3. Import the desired data structure or algorithm module directly into your python code.
-   ```python
-   from raydsa.data_structures.linked_lists import SinglyLinkedList
-   ```
+## Data Structures
+### Linked Lists
+- Singly Linked List
+<br>
+
+## Algorithms
+- None yet
+<br>
 
 ## Contributing
 Contributions to this project are welcome! Feel free to submit issues or pull requests.
 <br>
+<br>
+
+## Contributors
+<a href="https://github.com/wangster6/raydsa/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wangster6/raydsa" />
+</a>
 <br>
 ## Contact
 For questions or feedback, please contact me on [my profile](https://github.com/wangster6).
