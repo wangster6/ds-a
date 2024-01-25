@@ -22,7 +22,7 @@ This repository is a collection of essential data structures and algorithms impl
 <br>
 
 ## Contributing
-Contributions to this project are welcome! Feel free to submit issues or pull requests.
+Contributions to this project are welcome! I am constantly looking to improve readability, code quality, and the efficiency of my code so feel free to submit issues or pull requests if you have any changes or suggestions to make.
 <br>
 <br>
 
