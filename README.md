@@ -26,10 +26,12 @@ Contributions to this project are welcome! Feel free to submit issues or pull re
 <br>
 <br>
 
+## Contact
+For questions or feedback, please contact me on [my profile](https://github.com/wangster6).
+<br>
+<br>
+
 ## Contributors
 <a href="https://github.com/wangster6/raydsa/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=wangster6/raydsa" />
 </a>
-<br>
-## Contact
-For questions or feedback, please contact me on [my profile](https://github.com/wangster6).
