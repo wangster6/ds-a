@@ -8,7 +8,7 @@ Created: 1/25/2024
 """
 
 import unittest
-from singly_linked_list import SinglyLinkedList
+from data_structures.linked_list.singly_linked_list import SinglyLinkedList
 
 class TestSinglyLinkedList(unittest.TestCase):
     """

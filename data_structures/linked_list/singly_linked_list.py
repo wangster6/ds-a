@@ -1,18 +1,13 @@
 """
 singly_linked_list.py
 
-Contains the implementation of a sinlgy linked list data structure.
+Contains the implementation of a singly linked list data structure.
 
 Author: Ray Wang
 Created: 12/19/2023
 """
 
-# class to represent a node in the linked list
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-        
+from data_structures.common.node import Node  
         
 # class to manage the linked list
 class SinglyLinkedList:
