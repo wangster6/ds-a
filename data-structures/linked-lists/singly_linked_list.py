@@ -93,6 +93,24 @@ class SinglyLinkedList:
         
         return None # returns None if no node with the specified data is found
     
+    def __len__(self):
+        """
+        Returns the length of the linked list
+        
+        Parameters:
+            No parameters.
+            
+        Returns:
+            count: Returns the number of nodes in the linked list.
+        """
+        current = self.head # set current to the head of the list
+        count = 0
+        while current: # while current is not None (the list is not empty)
+            count += 1 # increment count variable
+            current = current.next # move current to the next node in the list
+            
+        return count
+    
     def display(self):
         """
         Displays the entire linked list using print.
