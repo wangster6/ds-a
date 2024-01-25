@@ -102,6 +102,8 @@ class TestSinglyLinkedList(unittest.TestCase):
         """
         Test that the len function correctly returns the length of the linked list.
         """
+        assert len(self.list) == 0 # asserts that len returns 0 for an empty list
+        
         self.list.append(1)
         self.list.append(2)
         self.list.append(3)
@@ -118,5 +120,3 @@ class TestSinglyLinkedList(unittest.TestCase):
         print("Test Display: ", end="")
         self.list.display()
         
-    # def test_append_invalid_data_type(self):
-    #     list = SinglyLinkedList
