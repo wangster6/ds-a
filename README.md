@@ -15,11 +15,10 @@ This repository is a collection of essential data structures and algorithms impl
 ## Getting Started
 1. Clone this repository to your local machine.
 2. Navigate to the ray-dsa library directory.
-3. Import the desired data structure or algorithm module directly into your python code. Here is an example:
+3. Import the desired data structure or algorithm module directly into your python code.
    ```python
-   from ray-dsa.data_structures import singly-linked-list
+   from raydsa.data_structures.linked_lists import SinglyLinkedList
    ```
-<br>
 
 ## Contributing
 Contributions to this project are welcome! Feel free to submit issues or pull requests.
