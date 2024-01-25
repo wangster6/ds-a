@@ -75,15 +75,19 @@ class SinglyLinkedList:
             None: None is returned if the list is empty or if no node is found with the specified data.
             deleted: Returns the deleted node if it is found in the list.
         """
+        # runtime of O(1)
         if self.head is None:
             return None # returns None if the list is empty
         
-        current = self.head
-        if current.data == data: # checks if the head node of the linked list contains the specified data and should be removed
-            deleted = current
-            self.head = current.next
+        # runtime of O(1)
+        if self.head.data == data: # checks if the head node of the linked list contains the specified data and should be removed
+            deleted = self.head
+            self.head = self.head.next
             return deleted
         
+        current = self.head
+        
+        # runtime of O(n)
         while current.next: # traverse through the linked list until we reach the last node
             if current.next.data == data: # check if the node after the current one contains the specified data and should be removed
                 deleted = current.next
