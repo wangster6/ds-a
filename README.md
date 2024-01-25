@@ -4,6 +4,7 @@ This repository is a collection of essential data structures and algorithms impl
 <br>
 ## Features
 - **Clear Documentation:** Each module consists of detailed explanations and comments to help you understand and integrate the code into your own projects.
+- **Time Complexity:** The time complexity is calculated for various scenarios and is documented within the code comments. This provides insight into the efficiency of the implemented algorithms in different situations.
 - **Testing Cases:** A collection of test cases are included to show and ensure the correctness and reliability of the implemented data structures and algorithms.
 - **Error Handling:** Robust error handling mechanisms to provide informative error messages and improve the library's resilience in real-world applications.
 <br>
