@@ -14,12 +14,16 @@ This repository is a collection of essential data structures and algorithms impl
 <br>
 
 ## Data Structures
+### Common
+- Node
+
 ### Linked Lists
 - Singly Linked List (Basic functionality completed and tested. Looking for new features or methods to add.)
 <br>
 
 ## Algorithms
-- None yet
+### Sorting
+- Merge Sort for Linked Lists
 <br>
 
 ## Contributing
