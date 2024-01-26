@@ -7,11 +7,26 @@ Author: Ray Wang
 Created: 12/19/2023
 """
 
-from data_structures.common.node import Node  
+from data_structures.common.node import Node
+from data_structures.common.linked_list import LinkedList
         
-# class to manage the linked list
 class SinglyLinkedList:
+    """
+    Class: SinglyLinkedList
+
+    A singly linked list data structure.
+    """
+    
     def __init__(self):
+        """
+        Initializes a new SinglyLinkedList instance.
+        
+        Parameters:
+            No parameters.
+            
+        Returns:
+            Nothing returned.
+        """
         self.head = None
 
     def is_empty(self):
