@@ -102,6 +102,19 @@ class LinkedList(ABC):
         Parameters:
             No parameters.
             
+        Yields:
+            Any: The elements of the linked list, one at a time.
+        """
+        pass
+    
+    @abstractmethod
+    def __iter__(self):
+        """
+        Returns an iterator for the linked list.
+        
+        Parameters:
+            No parameters.
+            
         Returns:
             Nothing returned.
         """

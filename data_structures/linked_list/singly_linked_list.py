@@ -140,3 +140,18 @@ class SinglyLinkedList:
             print(current.data, end=" -> ")
             current = current.next
         print("None")
+        
+    def __iter__(self):
+        """
+        Iterates through the linked list.
+        
+        Parameters:
+            No parameters.
+            
+        Yields:
+            Any: The elements of the linked list, one at a time.
+        """
+        current = self.head
+        while current:
+            yield current.data
+            current = current.next

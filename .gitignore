@@ -2,3 +2,5 @@ data_structures/linked_list/__pycache__
 data_structures/common/__pycache__
 tests/data_structures/linked_list/__pycache__
 data_structures/interfaces/__pycache__
+algorithms/sorting/__pycache__
+tests/algorithms/sorting/__pycache__
