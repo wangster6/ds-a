@@ -6,6 +6,7 @@ Interface that contains the methods that all linked list implementations must im
 Author: Ray Wang
 Created: 1/26/2024
 """
+
 from abc import ABC, abstractmethod
 
 class LinkedList(ABC):
@@ -28,7 +29,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Checks if the list is empty.
         
@@ -41,7 +42,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def append(self, data) -> None:
+    def append(self, data):
         """
         Appends a new node with the provided data at the end of the list.
         
@@ -54,7 +55,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def prepend(self, data) -> None:
+    def prepend(self, data):
         """
         Prepends a new node with the provided data at the front of the list.
         
@@ -67,7 +68,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def delete(self, data) -> Optional[Node]:
+    def delete(self, data):
         """
         Removes the first occurrence of a node with the specified data in the list.
         
@@ -75,12 +76,13 @@ class LinkedList(ABC):
             data: The data to be deleted from the list.
         
         Returns:
-            Optional[Node]: Returns the deleted node if it is found in the list, None otherwise.
+            None: None is returned if the list is empty or if no node is found with the specified data.
+            deleted: Returns the deleted node if it is found in the list.
         """
         pass
     
     @abstractmethod
-    def __len__(self) -> int:
+    def __len__(self):
         """
         Returns the length of the linked list
         
@@ -93,7 +95,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def display(self) -> None:
+    def display(self):
         """
         Displays the entire linked list using print.
         

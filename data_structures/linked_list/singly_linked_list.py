@@ -8,7 +8,7 @@ Created: 12/19/2023
 """
 
 from data_structures.common.node import Node
-from data_structures.common.linked_list import LinkedList
+from data_structures.interfaces.linked_list import LinkedList
         
 class SinglyLinkedList:
     """

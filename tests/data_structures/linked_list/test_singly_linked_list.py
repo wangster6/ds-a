@@ -9,6 +9,7 @@ Created: 1/25/2024
 
 import unittest
 from data_structures.linked_list.singly_linked_list import SinglyLinkedList
+from data_structures.interfaces.linked_list import LinkedList
 
 class TestSinglyLinkedList(unittest.TestCase):
     """
@@ -19,7 +20,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         """
         Initializes a new SinglyLinkedList instance for each test.
         """
-        self.list = SinglyLinkedList()
+        self.list: LinkedList = SinglyLinkedList()
     
     def tearDown(self):
         """
