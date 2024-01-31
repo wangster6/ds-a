@@ -10,6 +10,7 @@ Created: 1/25/2024
 from data_structures.common.node import Node
 from data_structures.interfaces.linked_list import LinkedList
 from data_structures.linked_list.singly_linked_list import SinglyLinkedList
+from functools import cmp_to_key
 
 def merge_sort_linked_list(list: LinkedList, compare_func):
     """
@@ -22,13 +23,22 @@ def merge_sort_linked_list(list: LinkedList, compare_func):
     Returns:
         LinkedList: The sorted linked list.
     """
-    if list.is_empty:
+    if list.is_empty():
+        list.display() 
+        print("List: ", list)
+        return list
+
+    if list.len() == 1:
+        print("List: ", list)
+        print("List length: ", list.len())
+        print("List has one element.")
         return list
 
     # Split the list into two halves
     mid = find_middle(list)
-    left_list = list.copy()
-    right_list = mid.next.copy()
+    mid_idx = find_middle_index(list)
+    left_list = list.subset(0, mid_idx)
+    right_list = list.subset(mid_idx + 1, list.len())
     mid.next = None
 
     # Recursively sort the two halves
@@ -50,40 +60,63 @@ def find_middle(list: LinkedList):
     Returns:
         Node: The middle node of the linked list.
     """
-    middle = list.len() // 2
-    current = list.head
-    
-    while middle > 0:
-        current = current.next
-        middle -= 1
-    
-    return current
+    slow_ptr = list.head
+    fast_ptr = list.head
 
-def merge(left: LinkedList, right: LinkedList, compare_func):
+    while fast_ptr is not None and fast_ptr.next is not None:
+        slow_ptr = slow_ptr.next
+        fast_ptr = fast_ptr.next.next
+
+    return slow_ptr
+
+def find_middle_index(list: LinkedList):
     """
-    Merges the two provided linked lists into a single linked list.
+    Finds the middle node of the linked list.
     
     Parameters:
-        left: The left linked list.
-        right: The right linked list.
-        compare_func: The function used to compare two elements in the list.
+        list: The linked list to find the middle node of.
     
     Returns:
-        LinkedList: The merged linked list.
+        Node: The middle node of the linked list.
     """
-    result = LinkedList()
-    current = result.head
+    slow_ptr = list.head
+    fast_ptr = list.head
+    index = 0
 
-    while left.head is not None and right.head is not None:
-        if compare_func(left.head.data, right.head.data) <= 0:
-            current.next = left.head
-            left.head = left.head.next
+    while fast_ptr is not None and fast_ptr.next is not None:
+        slow_ptr = slow_ptr.next
+        fast_ptr = fast_ptr.next.next
+        index += 1
+
+    return index
+    # middle = list.len() // 2
+    # current = list.head
+    
+    # while middle > 0:
+    #     current = current.next
+    #     middle -= 1
+    
+    # return current
+
+def merge(left: LinkedList, right: LinkedList, compare_func):
+    result = LinkedList()
+    dummy = Node(None)
+    result.prepend(dummy)
+    current = dummy
+    
+    left_current = left.iter()
+    right_current = right.iter()
+
+    while left_current is not None and right_current is not None:
+        if compare_func(left_current.data, right_current.data) <= 0:
+            current.next = left_current
+            left_current = left_current.next
         else:
-            current.next = right.head
-            right.head = right.head.next
+            current.next = right_current
+            right_current = right_current.next
         current = current.next
 
-    # One of the lists has ended, just append the rest of the other list
-    current.next = left.head if left.head is not None else right.head
+    # Append the rest of the remaining elements from left and right
+    current.next = left_current or right_current
 
     return result

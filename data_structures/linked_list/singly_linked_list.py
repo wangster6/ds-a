@@ -107,7 +107,7 @@ class SinglyLinkedList:
         
         return None # returns None if no node with the specified data is found
     
-    def __len__(self):
+    def len(self):
         """
         Returns the length of the linked list
         
@@ -141,7 +141,7 @@ class SinglyLinkedList:
             current = current.next
         print("None")
         
-    def __iter__(self):
+    def iter(self):
         """
         Iterates through the linked list.
         
@@ -155,3 +155,30 @@ class SinglyLinkedList:
         while current:
             yield current.data
             current = current.next
+    
+    def subset(self, start, end):
+        """
+        Creates a new linked list that is a subset of the current linked list
+        from the specified start index (inclusive) to the specified end index (exclusive).
+
+        Parameters:
+            start (int): The starting index of the subset.
+            end (int): The ending index (exclusive) of the subset.
+
+        Returns:
+            SinglyLinkedList: A new linked list containing the subset of elements.
+        """
+        if start < 0 or end > self.len() or start >= end:
+            raise ValueError("Invalid indices for subset")
+
+        new_list = SinglyLinkedList()
+        current = self.head
+        index = 0
+
+        while current and index < end:
+            if index >= start:
+                new_list.append(current.data)
+            current = current.next
+            index += 1
+
+        return new_list

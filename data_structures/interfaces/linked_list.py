@@ -82,7 +82,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def __len__(self):
+    def len(self):
         """
         Returns the length of the linked list
         
@@ -108,7 +108,7 @@ class LinkedList(ABC):
         pass
     
     @abstractmethod
-    def __iter__(self):
+    def iter(self):
         """
         Returns an iterator for the linked list.
         
@@ -117,5 +117,20 @@ class LinkedList(ABC):
             
         Returns:
             Nothing returned.
+        """
+        pass
+    
+    @abstractmethod
+    def subset(self, start, end):
+        """
+        Creates a new linked list that is a subset of the current linked list
+        from the specified start index (inclusive) to the specified end index (exclusive).
+
+        Parameters:
+            start (int): The starting index of the subset.
+            end (int): The ending index (exclusive) of the subset.
+
+        Returns:
+            SinglyLinkedList: A new linked list containing the subset of elements.
         """
         pass
