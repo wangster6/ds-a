@@ -23,7 +23,7 @@ This repository is a collection of essential data structures and algorithms impl
 
 ## Algorithms
 ### Sorting
-- Merge Sort for Linked Lists
+- Merge Sort for Linked Lists (Not working, need to be debugged and fixed.)
 <br>
 
 ## Contributing
